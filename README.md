@@ -1,0 +1,1 @@
+# cred-types-jolocom-demo
