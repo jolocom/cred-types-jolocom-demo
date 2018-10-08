@@ -1,0 +1,15 @@
+{
+  "name": "cred-types-jolocom-demo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jolocom/cred-types-jolocom-demo.git"
+  },
+  "version": "0.0.1",
+  "description": "Collection of metadata definitions for the demo Jolocom credential types",
+  "main": "js/index.js",
+  "typings": "js/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "prepublish": "rm -rf ./js; tsc"
+  }
+}
