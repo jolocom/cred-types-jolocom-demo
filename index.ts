@@ -28,8 +28,8 @@ export const claimsMetadata: ClaimsMetadataSummary = {
         schema: "http://schema.org/",
         familyName: "schema:familyName",
         givenName: "schema:givenName",
-        birthDate: 'schema:birthPlace',
-        birthPlace: 'schema:birthPlace',
+        residence: 'schema:residence',
+        postalCode: 'schema:postalCode',
         identifier: "schema:identifier"
       }
     ]

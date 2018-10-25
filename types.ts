@@ -27,8 +27,8 @@ export interface DemoDriversLicenceClaimMetadata extends BaseMetadata {
   claimInterface?: {
     givenName: string
     familyName: string
-    birthDate: string
-    birthPlace: string
+    residence: string
+    postalCode: string
     identifier: string
   }
 }
