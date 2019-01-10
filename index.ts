@@ -5,17 +5,21 @@ export { BaseMetadata, ContextEntry, ClaimInterface } from './types'
 export const claimsMetadata: ClaimsMetadataSummary = {
   demoId: {
     type: ['Credential', 'ProofOfDemoIdCredential'],
-    name: 'Demo Id',
+    name: 'Identity Card',
     context: [
       {
         ProofOfDemoIdCredential: 'https://identity.jolocom.com/terms/ProofOfDemoIdCredential',
-        schema: "http://schema.org/",
-        familyName: "schema:familyName",
+        schema: 'https://schema.org/',
         givenName: "schema:givenName",
+        familyName: "schema:familyName",
+        gender: 'schema:gender',
+        nationality: 'schema:nationality',
         birthDate: 'schema:birthPlace',
         birthPlace: 'schema:birthPlace',
-        nationality: "schema:nationality",
-        identifier: "schema:identifier"
+        validFrom: 'schema:validFrom',
+        validThrough: 'schema:validThrough',
+        identifier: 'schema:identifier',
+        issuedBy: 'schema:issuedBy'
       }
     ]
   },
