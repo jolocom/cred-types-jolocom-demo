@@ -1,4 +1,5 @@
 export type ContextEntry = string | { [key: string]: ContextEntry }
+
 export type ClaimInterface = {
   [key: string]: string | number | boolean | Date
 }
@@ -20,8 +21,8 @@ export interface DemoIdClaimMetadata extends BaseMetadata {
     identifier: string
     gender: string
     issuedBy: string
-    validFrom: Date | number
-    validThrough: Date | number
+    validFrom: string
+    validThrough: string
   }
 }
 
