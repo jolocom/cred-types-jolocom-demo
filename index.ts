@@ -10,8 +10,8 @@ export const claimsMetadata: ClaimsMetadataSummary = {
       {
         ProofOfDemoIdCredential: 'https://identity.jolocom.com/terms/ProofOfDemoIdCredential',
         schema: 'https://schema.org/',
-        givenName: "schema:givenName",
-        familyName: "schema:familyName",
+        givenName: 'schema:givenName',
+        familyName: 'schema:familyName',
         gender: 'schema:gender',
         nationality: 'schema:nationality',
         birthDate: 'schema:birthPlace',
@@ -23,18 +23,30 @@ export const claimsMetadata: ClaimsMetadataSummary = {
       }
     ]
   },
+  // TODO Move into separate, project specific repository
+  akaart: {
+    type: ['Credential', 'AKaartCredential'],
+    name: 'A-Kaart',
+    context: [
+      {
+        AKaartCredential: 'https://identity.jolocom.com/terms/AKaartCredential',
+        schema: 'https://schema.org/',
+        identifier: 'schema:identifier'
+      }
+    ]
+  },
   demoDriversLicence: {
     type: ['Credential', 'ProofOfDemoDriversLicenceCredential'],
     name: 'Demo Drivers Licence',
     context: [
       {
         ProofOfDemoDriversLicenceCredential: 'https://identity.jolocom.com/terms/ProofOfDemoDriversLicenceCredential',
-        schema: "http://schema.org/",
-        familyName: "schema:familyName",
-        givenName: "schema:givenName",
+        schema: 'http://schema.org/',
+        familyName: 'schema:familyName',
+        givenName: 'schema:givenName',
         residence: 'schema:residence',
         postalCode: 'schema:postalCode',
-        identifier: "schema:identifier"
+        identifier: 'schema:identifier'
       }
     ]
   }

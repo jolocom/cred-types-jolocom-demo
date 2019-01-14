@@ -1,6 +1,6 @@
 export type ContextEntry = string | { [key: string]: ContextEntry }
 export type ClaimInterface = {
-  [key: string]: string | number | boolean | Date | ClaimInterface
+  [key: string]: string | number | boolean | Date
 }
 
 export interface BaseMetadata {
@@ -35,7 +35,14 @@ export interface DemoDriversLicenceClaimMetadata extends BaseMetadata {
   }
 }
 
+export interface AKaartClaimMetadata extends BaseMetadata {
+  claimInterface?: {
+    identifier: string
+  }
+}
+
 export interface ClaimsMetadataSummary {
   demoId: DemoIdClaimMetadata
+  akaart: AKaartClaimMetadata
   demoDriversLicence: DemoDriversLicenceClaimMetadata
 }
