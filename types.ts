@@ -1,15 +1,13 @@
 export type ContextEntry = string | { [key: string]: ContextEntry }
 export type ClaimInterface = {
-  [key: string]: string | number | boolean
+  [key: string]: string | number | boolean | Date
 }
 
 export interface BaseMetadata {
   type: string[]
   name: string
   context?: ContextEntry[]
-  claimInterface?: {
-    [key: string]: string | number | boolean | ClaimInterface
-  }
+  claimInterface?: ClaimInterface
 }
 
 export interface DemoIdClaimMetadata extends BaseMetadata {
@@ -17,9 +15,13 @@ export interface DemoIdClaimMetadata extends BaseMetadata {
     givenName: string
     familyName: string
     birthDate: string
-    birthPlace: string
+    birthPlace?: string
     nationality: string
     identifier: string
+    gender: string
+    issuedBy: string
+    validFrom: Date | number
+    validThrough: Date | number
   }
 }
 
@@ -33,7 +35,14 @@ export interface DemoDriversLicenceClaimMetadata extends BaseMetadata {
   }
 }
 
+export interface AKaartClaimMetadata extends BaseMetadata {
+  claimInterface?: {
+    identifier: string
+  }
+}
+
 export interface ClaimsMetadataSummary {
   demoId: DemoIdClaimMetadata
+  akaart: AKaartClaimMetadata
   demoDriversLicence: DemoDriversLicenceClaimMetadata
 }
