@@ -3,6 +3,18 @@ import { ClaimsMetadataSummary } from './types'
 export { BaseMetadata, ContextEntry, ClaimInterface } from './types'
 
 export const claimsMetadata: ClaimsMetadataSummary = {
+  demoProofOfUniApplication: {
+    type: ['Credential', 'ProofOfApplication'],
+    name: 'University application proof',
+    context: [{
+      jolo: 'https://identity.jolocom.com/terms/',
+      ProofOfApplicationCredential: 'jolo:ProofOfDemoIdCredential',
+      university: 'schema:CollegeOrUniversity',
+      faculty: 'schema:department',
+      validFrom: 'schema:validFrom',
+      validThrough: 'schema:validThrough'
+    }]
+  },
   demoId: {
     type: ['Credential', 'ProofOfDemoIdCredential'],
     name: 'Identity Card',

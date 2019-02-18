@@ -10,6 +10,15 @@ export interface BaseMetadata {
   claimInterface?: ClaimInterface
 }
 
+export interface DemoProofOfApplication extends BaseMetadata {
+  claimInterface?: {
+    university: string
+    faculty: string
+    validFrom: Date | number
+    validThrough: Date | number
+  }
+}
+
 export interface DemoIdClaimMetadata extends BaseMetadata {
   claimInterface?: {
     givenName: string
@@ -45,4 +54,5 @@ export interface ClaimsMetadataSummary {
   demoId: DemoIdClaimMetadata
   akaart: AKaartClaimMetadata
   demoDriversLicence: DemoDriversLicenceClaimMetadata
+  demoProofOfUniApplication: DemoProofOfApplication
 }
