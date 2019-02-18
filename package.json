@@ -4,7 +4,7 @@
     "type": "git",
     "url": "git+https://github.com/jolocom/cred-types-jolocom-demo.git"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Collection of metadata definitions for the demo Jolocom credential types",
   "main": "js/index.js",
   "typings": "js/index.d.ts",
