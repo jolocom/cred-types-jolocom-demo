@@ -11,8 +11,7 @@ export const claimsMetadata: ClaimsMetadataSummary = {
       ProofOfApplicationCredential: 'jolo:ProofOfDemoIdCredential',
       university: 'schema:CollegeOrUniversity',
       faculty: 'schema:department',
-      validFrom: 'schema:validFrom',
-      validThrough: 'schema:validThrough'
+      caseNumber: 'schema:identifier'
     }]
   },
   demoId: {

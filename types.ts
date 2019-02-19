@@ -14,8 +14,7 @@ export interface DemoProofOfApplication extends BaseMetadata {
   claimInterface?: {
     university: string
     faculty: string
-    validFrom: Date | number
-    validThrough: Date | number
+    caseNumber: number
   }
 }
 
